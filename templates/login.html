@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<div class="container">
+  <h2 class="display-3 pb-1">Login</h2>
+  <!-- Login Form -->
+  <form action="/login" class="form" method="POST">
+    <!-- Import form from register_login_form.html -->
+    {% include 'register_login_form.html' %}
+
+    <button class="btn btn-lg btn-success mb-3" type="submit">Login</button>
+  </form>
+</div>
+{% endblock %}

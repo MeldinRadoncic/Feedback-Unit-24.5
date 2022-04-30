@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Feedback{% endblock %}
+
+{% block content %}
+<div class="container container-md">
+  <h1>Edit Feedback</h1>
+  <!-- Edit Form -->
+  <form method="POST" action="/feedback/{{ feedback.id }}/update">
+    <!-- Import form from register_login_form.html -->
+    {% include 'register_login_form.html' %}
+
+    <button class="btn btn-primary">Edit!</button>
+  </form>
+</div>
+{% endblock %}

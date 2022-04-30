@@ -1,0 +1,29 @@
+ {% extends 'base.html' %}
+
+ {% block title %} Home Page {% endblock %}
+
+ {% block content %}
+
+ <div class="container-fluid container-md">
+   <div class="row">
+     <div class="col">
+       <h1 class="display-1">Welcome</h1>
+
+       <div class="vstack gap-3">
+         <div class="bg-light border">
+           <ul class="list-group">
+             {% for feedback in feedback %}
+             {% if feedback.username %}
+             <li class="list-group-item display-6"><a href="/users/{{feedback.username}}" class="link-secondary">{{ feedback.title }}</a>></li>
+             <p>{{feedback.title}}</p>
+             {% else %}
+             <a href="/login">{{feedback.title}}</a>
+             {% endif %}
+             {% endfor %}
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+ {% endblock %}
